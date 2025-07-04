@@ -37,7 +37,23 @@ func options(b Bill) {
 	reader := bufio.NewReader(os.Stdin)
 
 	opt, _ := getInput("Enter your choice (a - add item, S- save the bill, T- To add tip)", reader)
-	fmt.Println(opt)
+
+	switch opt {
+	case "a":
+		name, _ := getInput("Item name:", reader)
+		price, _ := getInput("Item price:", reader)
+		fmt.Println(name, price)
+	case "t":
+		tip, _ := getInput("Enter the tip amount $:", reader)
+		fmt.Println("you have added tip:", tip)
+	case "s":
+		fmt.Println("You chose S")
+
+	default:
+		fmt.Println("Please enter valid key word")
+		options(b)
+
+	}
 }
 
 func main() {
