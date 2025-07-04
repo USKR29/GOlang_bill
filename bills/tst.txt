@@ -1,0 +1,6 @@
+Bill breakdown: 
+tea:                     ......$20
+coffee:                  ......$30
+sandwich:                ......$30
+Tips:                    ......$5.00
+Total:                   ......$85.00

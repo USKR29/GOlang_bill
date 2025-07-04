@@ -66,7 +66,8 @@ func options(b Bill) {
 		fmt.Println("you have added tip:", tip)
 		options(b)
 	case "s":
-		fmt.Println("You chose to save the bill", b.format())
+		fmt.Println("You chose to save the bill\n", b.format())
+		b.save()
 
 	default:
 		fmt.Println("Please enter valid key word")
