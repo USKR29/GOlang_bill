@@ -32,6 +32,14 @@ func getBill() Bill {
 	return b
 }
 
+func options(b Bill) {
+
+	reader := bufio.NewReader(os.Stdin)
+
+	opt, _ := getInput("Enter your choice (a - add item, S- save the bill, T- To add tip)", reader)
+	fmt.Println(opt)
+}
+
 func main() {
 
 	// MyBill := NewBill("Jhone 's Bill")
@@ -45,5 +53,7 @@ func main() {
 
 	mybill := getBill()
 
-	fmt.Println(mybill)
+	options(mybill)
+
+	//fmt.Println(mybill)
 }
